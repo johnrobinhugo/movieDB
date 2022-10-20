@@ -1,0 +1,29 @@
+:root {
+  // Colors
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-dark-grey: #2B2B2B;
+  --color-yellow: #EDE744;
+  --color-green: #13A218;
+
+  // Typography
+  --base-font-family: 'Montserrat', sans-serif;
+  --base-font-size: 14px;
+
+  // Spacing
+  --spacing-1: 10px;
+  --spacing-2: 20px;
+  --spacing-3: 30px;
+  --spacing-4: 40px;
+  --spacing-5: 50px;
+  --spacing-6: 60px;
+
+  @include for-tablet-portrait-up {
+    --base-font-size: 16px;
+  }
+}
+
+// Utility classes
+.bg-white {
+  background-color: var(--color-white);
+}

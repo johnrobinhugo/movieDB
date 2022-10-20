@@ -1,0 +1,62 @@
+.button,
+button {
+  background-color: var(--color-white);
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 17px;
+  color: var(--color-black);
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  transition:
+    background-color 200ms ease-out,
+    color 200ms ease-out;
+
+  &:hover,
+  &:focus {
+    background-color: var(--color-yellow);
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.7;
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-white);
+    }
+  }
+
+  @include for-tablet-portrait-up {
+    font-size: 17px;
+  }
+
+  &--hollow {
+    background-color: transparent;
+    border: 2px solid var(--color-white);
+    color: var(--color-white);
+
+    &:hover,
+    &:focus {
+      background-color: var(--color-white);
+      color: var(--color-black);
+    }
+  }
+
+  &--like {
+    width: 25px;
+    height: 25px;
+    padding: 0;
+    background: transparent url('../../images/icons/icon-heart-hollow-black.svg') center center / 25px 25px no-repeat;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
+  }
+
+  &--like-active {
+    background: transparent url('../../images/icons/icon-heart-red.svg') center center / 22px 22px no-repeat;
+  }
+}

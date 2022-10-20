@@ -1,0 +1,36 @@
+.arrow-link {
+  position: relative;
+  padding-right: 20px;
+  display: inline-block;
+  text-decoration: none;
+
+  &:after {
+    content: '';
+    width: 25px;
+    height: 20px;
+    background: url('../../images/icons/icon-arrow-right-black.svg') center right / contain no-repeat;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+    transition: right 200ms ease-out;
+  }
+
+  &:hover:after,
+  &:focus:after {
+    right: -5px;
+  }
+
+  &--white:after {
+    background: url('../../images/icons/icon-arrow-right-white.svg') center right / contain no-repeat;
+  }
+}
+
+.teaser {
+  &:hover,
+  &:focus {
+    .arrow-link:after {
+      right: -5px;
+    }
+  }
+}

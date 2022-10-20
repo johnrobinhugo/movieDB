@@ -1,0 +1,16 @@
+html {
+  background-color: var(--color-black);
+}
+
+body {
+  font-family: var(--base-font-family);
+  font-size: var(--base-font-size);
+}
+
+a {
+  color: var(--color-white);
+}
+
+:focus {
+  outline: none;
+}

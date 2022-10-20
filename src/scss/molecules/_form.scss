@@ -1,0 +1,52 @@
+form {
+  > * {
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+input {
+  padding: 10px;
+}
+
+.form__item {
+  display: flex;
+  flex-direction: column;
+
+  > * {
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+}
+
+@include for-tablet-portrait-up {
+  input {
+    width: 400px;
+    font-size: 18px;
+  }
+}
+
+@include for-tablet-portrait-up {
+  .form__item {
+    flex-direction: row;
+  }
+
+  .form__item--search {
+    justify-content: flex-start;
+
+    > * {
+      margin-left: 20px;
+      margin-top: 0;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+}

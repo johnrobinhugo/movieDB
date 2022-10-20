@@ -1,0 +1,106 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+
+  + * {
+    margin-top: 10px
+  }
+}
+
+h1 {
+  font-size: 30px;
+  line-height: 1.3em;
+}
+
+h2 {
+  font-size: 25px;
+  line-height: 1.2em;
+}
+
+h3 {
+  font-size: 21px;
+  line-height: 1.2em;
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 1.2em;
+}
+
+h5 {
+  font-size: 16px;
+}
+
+h6 {
+  font-style: italic;
+}
+
+p {
+  font-size: var(--base-font-size);
+  line-height: 1.5em;
+}
+
+.search-result-title {
+  margin-top: 20px;
+}
+
+.meta-info > * {
+  margin-top: var(--spacing-1);
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+.meto-info__item span {
+  font-weight: 700;
+}
+
+.like-this {
+  margin-top: var(--spacing-2);
+  display: flex;
+  align-items: center;
+
+  > * {
+    margin-left: 5px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+// Color classes
+.color-white {
+  color: var(--color-white);
+}
+
+@include for-tablet-landscape-up {
+  h1 {
+    font-size: 45px;
+  }
+  
+  h2 {
+    font-size: 32px;
+  }
+  
+  h3 {
+    font-size: 25px;
+  }
+  
+  h4 {
+    font-size: 20px;
+  }
+  
+  h5 {
+    font-size: 18px;
+  }
+  
+  h6 {
+    
+  }
+}

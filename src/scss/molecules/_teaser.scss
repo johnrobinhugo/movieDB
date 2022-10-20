@@ -1,0 +1,14 @@
+.teaser {
+  display: block;
+  background-color: var(--color-yellow);
+  color: var(--color-black);
+  text-decoration: none;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.teaser__content {
+  padding: var(--spacing-2);
+}
