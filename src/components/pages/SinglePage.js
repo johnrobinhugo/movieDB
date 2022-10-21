@@ -36,7 +36,8 @@ class SinglePage extends React.Component {
       });
 
     // Really ugly solution for getting the id from the route
-    // What should
+    // What I in reality should use is useParams() https://reactrouter.com/en/main/hooks/use-params
+    // However, to use this I would need to rebuild the component since I cant use that function inside of a class component
     const str = window.location.href;
     const lastIndex = str.lastIndexOf("/");
     const pageId = str.substring(lastIndex + 1);
