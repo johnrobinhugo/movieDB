@@ -13,6 +13,8 @@ function SinglePage(props) {
   const [backdropSizes, setBackdropSizes] = useState([])
   const likeStatus = useState(false)
 
+  let pageId = useParams()
+
   useEffect(() => {
     const apiKey = "629509ed105e3999068ed4c71c959130";
      // Get API configs like images sizes
@@ -29,20 +31,20 @@ function SinglePage(props) {
    // Really ugly solution for getting the id from the route
    // What I in reality should use is useParams() https://reactrouter.com/en/main/hooks/use-params
    // However, to use this I would need to rebuild the component since I cant use that function inside of a class component
-   const str = window.location.href;
-   const lastIndex = str.lastIndexOf("/");
-   const pageId = str.substring(lastIndex + 1);
+   //const str = window.location.href;
+   //const lastIndex = str.lastIndexOf("/");
+   //const pageId = str.substring(lastIndex + 1);
 
-   let mediaType = "";
+    let mediaType = "";
 
-   if (props.mediaType === "movie") {
-     mediaType = "movie";
-   } else if (props.mediaType === "tv-show") {
-     mediaType = "tv";
-   }
+    if (props.mediaType === "movie") {
+      mediaType = "movie";
+    } else if (props.mediaType === "tv-show") {
+      mediaType = "tv";
+    }
 
    fetch(
-     `https://api.themoviedb.org/3/${mediaType}/${pageId}?api_key=${apiKey}`
+     `https://api.themoviedb.org/3/${mediaType}/${pageId.id}?api_key=${apiKey}`
    )
      .then((response) => response.json())
      .then((data) => {
